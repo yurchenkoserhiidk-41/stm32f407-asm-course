@@ -8,7 +8,7 @@
  *
  * Simplified version for educational purposes:
  * - No heap/stack management
- * - No C runtime initialization
+ * - startup.s initializes .data and .bss before main
  *
  * Entry point: Reset_Handler (defined in startup.s)
  */
