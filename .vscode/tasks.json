@@ -53,6 +53,19 @@
         "examples/mov_operations",
         "examples/add_sub_operations",
         "labs/lab01_basic_operations",
+        "labs/lab02_memory_load_store",
+        "labs/lab03_arrays",
+        "examples/memory_store",
+        "examples/memory_load_sizes",
+        "examples/memory_store_sizes",
+        "examples/memory_addressing",
+        "examples/memory_variables",
+        "examples/array_word_read",
+        "examples/array_word_write",
+        "examples/array_byte_read",
+        "examples/array_pointer_iteration",
+        "examples/array_block_transfer",
+
       ],
       "default": "examples/mov_operations"
     }

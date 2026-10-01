@@ -34,10 +34,14 @@ stm32f407-asm-course/
 │
 ├── examples/               ← examples from lectures/videos
 │   ├── mov_operations/
-│   └── add_sub_operations/
+│   ├── add_sub_operations/
+│   ├── memory_*/           ← five load/store examples
+│   └── array_*/            ← five array examples
 │
 ├── labs/                   ← student labs
-│   └── lab01_basic_operations/
+│   ├── lab01_basic_operations/
+│   ├── lab02_memory_load_store/
+│   └── lab03_arrays/
 │
 ├── docs/
 │   └── student-workflow.md  ← fork, review, submission, and course updates
@@ -48,6 +52,17 @@ stm32f407-asm-course/
 ```
 
 ---
+
+## Practical Works
+
+| Lab | Topic | Instructions |
+|---|---|---|
+| 1 | Number systems, `MOV`, `ADD`, `SUB`, registers | [Practical Work 1](labs/lab01_basic_operations/README.md) |
+| 2 | RAM, data sizes, load/store, addressing modes | [Practical Work 2](labs/lab02_memory_load_store/README.md) |
+| 3 | Arrays, indexing, pointer iteration, optional `LDM/STM` | [Practical Work 3](labs/lab03_arrays/README.md) |
+
+Complete the labs in order. Labs 2 and 3 include complete guided examples in
+`examples/`, starter source files, variant tasks, and report requirements.
 
 ## Environment Setup
 
@@ -161,6 +176,8 @@ All commands are run from the repository root. Pass `PROJECT=` with the path to 
 make PROJECT=examples/mov_operations
 make PROJECT=examples/add_sub_operations
 make PROJECT=labs/lab01_basic_operations
+make PROJECT=labs/lab02_memory_load_store
+make PROJECT=labs/lab03_arrays
 ```
 
 After each successful build, the selected project ELF is also copied to:
@@ -351,13 +368,14 @@ make PROJECT=<selected-project>
 6. Address feedback on the same branch and merge only after `@ant112342`
    approves the current work.
 
-Required files, relative to the lab directory:
+Required files, relative to the lab directory (see each lab for specific report requirements):
 
 * `main.s` — commented assembly source for your variant;
 * `README.md` — append a **Student report** section with your name, GitHub
   username, variant, manual work, register comparison, and conclusion; preserve
   the original instructions;
-* `screenshots/debug_registers.png` — your register panel during execution.
+* `screenshots/debug_registers.png` — your register panel during execution;
+* for Labs 2 and 3, `screenshots/debug_memory.png` — memory contents after the stores.
 
 Keep `build/` and generated `.o`, `.elf`, `.bin`, and `.map` files out of commits.
 The [student workflow](docs/student-workflow.md) includes exact commands and
