@@ -407,3 +407,38 @@ Therefore, the ARM Assembly program works correctly.
 What happens if `A - B` becomes negative in unsigned arithmetic?
 
 Write your answer in 1–2 sentences.
+
+# Student report
+
+11. Yurchenko Serhii      DK-41   @yurchenkoserhiidk-41   Variant number 4
+
+## Manual work:
+
+![Register panel manual conversion](screenshots/debug_registers_manual_conversion.png)
+
+## Table:
+
+| Register | Meaning | Expected value | Debugger value |
+|---|---|---:|---:|
+| R0 | A | 0x64 | 0x64 |
+| R1 | B | 0x25 | 0x25 |
+| R2 | A + B | 0x89 | 0x89 |
+| R3 | A - B | 0x3F | 0x3F |
+
+## Start register table:
+
+![Register panel start](screenshots/debug_registers_start.png)
+
+## Completed register table:
+
+![Register panel end](screenshots/debug_registers_end.png)
+
+## Conclusion
+
+I have an STM32F411, in the STM32F407.svd file there is data from https://raw.githubusercontent.com/cmsis-svd/cmsis-svd-data/main/data/STMicro/STM32F411.svd.
+
+The values in registers R0 and R1 match the input numbers from my variant.
+The values in R2 and R3 match my manual addition and subtraction results.
+Therefore, the ARM Assembly program works correctly.
+
+If the number A - B becomes negative in unsigned arithmetic, an underflow will occur.
