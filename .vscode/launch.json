@@ -7,7 +7,7 @@
       "request": "launch",
 
       "servertype": "openocd",
-      "serverpath": "/opt/openocd/bin/openocd",
+      "serverpath": "/usr/bin/openocd",
 
       "gdbPath": "gdb-multiarch",
       "objdumpPath": "arm-none-eabi-objdump",
